@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UrbanSewa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">UrbanSewa</a>
+  </div>
+</nav>
+<header class="hero text-center py-5 text-white bg-primary">
+  <h1>Skilled Help, Just a Tap Away</h1>
+  <p>Instant access to trusted professionals</p>
+</header>
+<section class="container my-5">
+  <h2>Select a Service</h2>
+  <div class="row text-center">
+    <div class="col-md-3"><button class="btn btn-outline-primary service-btn" data-service="Electrician">Electrician</button></div>
+    <div class="col-md-3"><button class="btn btn-outline-primary service-btn" data-service="Plumber">Plumber</button></div>
+    <div class="col-md-3"><button class="btn btn-outline-primary service-btn" data-service="Carpenter">Carpenter</button></div>
+    <div class="col-md-3"><button class="btn btn-outline-primary service-btn" data-service="Cleaner">Cleaner</button></div>
+  </div>
+</section>
+<section class="container my-5" id="booking-form" style="display: none;">
+  <h2>Book Your Service</h2>
+  <form>
+    <div class="mb-3">
+      <label for="userName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="userName"/>
+    </div>
+    <div class="mb-3">
+      <label for="userAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="userAddress"/>
+    </div>
+    <div class="mb-3">
+      <label for="userTime" class="form-label">Preferred Time</label>
+      <input type="datetime-local" class="form-control" id="userTime"/>
+    </div>
+    <button type="button" class="btn btn-success" onclick="submitBooking()">Book Now</button>
+  </form>
+</section>
+<section class="container my-5" id="confirmation" style="display: none;">
+  <div class="alert alert-success">
+    Your service has been booked! A verified provider will contact you soon.
+  </div>
+</section>
+<footer class="bg-dark text-white text-center p-3">
+  © 2025 UrbanSewa. All rights reserved.
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
